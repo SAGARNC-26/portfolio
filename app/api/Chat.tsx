@@ -29,18 +29,16 @@ export default function Chat({ isFloating = true, initialMessage }: ChatProps) {
   const [input, setInput] = useState<string>("");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const { messages, isLoading, reload, stop, sendMessage, setMessages } =
-    useChat({
-      api: "/api/chat",
-      onResponse: () => setErrorMsg(null),
-      onFinish: () => {},
-      onError: (err) => {
-        setErrorMsg(
-          err.message || "Something went wrong with the AI assistant."
-        );
-        console.error("Chat error:", err);
-      },
-    });
+  const { messages, status, reload, stop, sendMessage, setMessages } = useChat({
+    api: "/api/chat",
+    onResponse: () => setErrorMsg(null),
+    onFinish: () => {},
+    onError: (err) => {
+      setErrorMsg(err.message || "Something went wrong with the AI assistant.");
+      console.error("Chat error:", err);
+    },
+  });
+  const isLoading = status === "streaming";
 
   const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import m1 from "@/public/me_avatar - Copy1.jpg";
 import avatar from "@/public/avatar-landing.png";
 import WelcomeModal from "@/components/welcomeModel";
-import Chat from "@/app/api/page";
+import Chat from "@/app/api/Chat";
 import sagar from "@/public/sagar.jpg";
 import AIAgent from "@/components/AIAgent";
 
