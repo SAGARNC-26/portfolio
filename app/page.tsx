@@ -14,10 +14,12 @@ export default function Home() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { ease: "easeOut", duration: 0.8 }, // ✅ fixed here
+      transition: {
+        ease: "easeOut" as const, // ✅ Type-safe easing
+        duration: 0.8,
+      },
     },
   };
-
   return (
     <div className="min-h-screen flex items-center justify-center  px-4 ">
       <div className="flex flex-col items-center justify-center gap-8 text-center">

@@ -78,7 +78,6 @@ function SideNavigation() {
               }`}
               href={link.href}
             >
-              {link.icon}
               <span>{link.name}</span>
             </Link>
           </li>
