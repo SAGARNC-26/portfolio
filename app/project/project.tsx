@@ -90,16 +90,16 @@ export default function ProjectsGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
           {projects.map((project) => (
             <Card key={project.id} className="overflow-hidden">
-              <div className="relative w-full h-48">
+              <div className="relative w-full h-64">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover rounded-t-xl"
+                  className="object-cover rounded-t-xl "
                 />
               </div>
 
-              <CardContent className="pt-4">
+              <CardContent className="pt-6 text-white">
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription className="mt-2">
                   {project.description}

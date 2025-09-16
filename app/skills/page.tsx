@@ -263,7 +263,9 @@ export default function Skills() {
               >
                 <div className="flex items-center gap-2">
                   {section.icon}
-                  <h3 className="text-lg font-semibold">{section.category}</h3>
+                  <h3 className="text-lg font-semibold text-white">
+                    {section.category}
+                  </h3>
                 </div>
 
                 <motion.div
