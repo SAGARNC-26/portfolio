@@ -169,7 +169,7 @@ export default function Skills() {
     {
       category: "Backend & Systems",
       icon: <Cpu className="h-5 w-5 text-emerald-600" />,
-      skills: ["C", "C++", "Python", "Git", "GitHub"],
+      skills: ["C", "C++", "Python", "Express js", "MongoDB", "Git", "GitHub"],
       color: "bg-emerald-50 text-emerald-600 border-emerald-200",
     },
     {
